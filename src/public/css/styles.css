@@ -1,0 +1,100 @@
+
+:root {
+    --color-amarillo: #EAC926;;
+    --color-azul: #03264C;
+    --color-celeste: #1259c3;
+    --color-gris-oscuro: #666;
+    --color-gris-claro: #ebebeb;
+    --color-verde: #39b54a;
+
+    --font-family-sans-serif: "Roboto", "Open Sans", sans-serif;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-gris-claro);
+}
+
+header {
+    background-color: var(--color-amarillo);
+    padding: 1rem;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+header .burger-menu {
+    margin-left: 10px;
+    text-align: center;
+    background-color: var(--color-celeste);
+    border-radius: 15%;
+    padding: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+header .burger-menu i {
+    color: white;
+    font-size: 2rem;
+}
+
+.banner img {
+    width: 100%;
+}
+
+main {
+    padding-top: 1em;
+    width: 90vw;
+    margin: 0 auto;
+
+}
+
+main section article {
+    margin-bottom: 10px;
+}
+
+main h3 {
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+main section article .product-info {
+    background-color: white;
+    border-top: var(--color-gris-claro) solid 1px;
+    padding: 15px;
+}
+
+@media (min-width: 361px) {
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+
+main img {
+    width: 100%;
+}
+
+main i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main .price {
+    font-size: 1.8rem;
+}
+
+main .discount,
+main .description {
+    font-size: 1.6rem;
+}
