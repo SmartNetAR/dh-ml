@@ -1,6 +1,7 @@
 // require('dotenv').config();
 const express = require('express');
 const path = require('path');
+const setRoutes = require('./routes');
 const app = express();
 
 const port = process.env.NODE_PORT || 3000;
@@ -9,17 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, './public')));
 
-app.get('/sign-in', (req, res) => {
-  res.render('signIn', {});
-});
-
-app.get('/sign-up', (req, res) => {
-  res.render('signUn', {});
-});
-
-app.get('/', (req, res) => {
-  res.render('index', {});
-});
+setRoutes(app);
 
 const reloadSomeConfiguration = () => {
   console.log('>>> reloadSomeConfiguration');
