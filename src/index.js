@@ -9,8 +9,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, './public')));
 
+app.get('/sign-in', (req, res) => {
+  res.render('signIn', {});
+});
+
+app.get('/sign-up', (req, res) => {
+  res.render('signUn', {});
+});
+
 app.get('/', (req, res) => {
-  res.render('index', { data: 'Hello World!' });
+  res.render('index', {});
 });
 
 const reloadSomeConfiguration = () => {
