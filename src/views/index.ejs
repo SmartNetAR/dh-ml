@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <title>Mercado Libre</title>
-</head>
+<%- include('./partials/head', {title: 'Mercado Libre'}) -%>
 
 <body>
     <%- include('./partials/header') -%>
@@ -67,31 +56,7 @@
         </section>
 
     </main>
-    <footer>
-        <ul>
-            <li class="payments">
-                <h4>Pagá con tarjeta o en efectivo</h4>
-                <p>Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o en efectivo en puntos de pago. ¡Y
-                    siempre es seguro!</p>
-            </li>
-
-            <li class="shipping">
-                <h4>Envio gratis desde los $ 2.500</h4>
-                <p>Solo por estar registrado en MercadoLiebre tenés envío gratis en miles de productos. Es un beneficio
-                    de Mercado Puntos</p>
-            </li>
-
-            <li class="security">
-                <h4>Seguridad de principio a fin</h4>
-                <p>¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas hacer porque estás siempre
-                    protegid@.</p>
-            </li>
-            <li class="copyright">
-                <p>Copyright © 1999-2021 MercadoLiebre S.R.L.</p>
-
-            </li>
-        </ul>
-    </footer>
+    <%- include('./partials/footer') -%>
 </body>
 
 </html>
