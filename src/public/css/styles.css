@@ -8,11 +8,15 @@
     --color-verde: #39b54a;
 
     --font-family-sans-serif: "Roboto", "Open Sans", sans-serif;
+}
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    box-sizing: border-box;
     font-size: 10px;
 }
 
@@ -99,11 +103,40 @@ main i {
     margin-bottom: 10px;
 }
 
+.product-info {
+    position: relative;
+}
+
+main .prices {
+    display: flex;
+
+}
+
 main .price {
     font-size: 1.8rem;
+    flex-grow: .3;
+}
+
+main .discount {
+    flex-grow: .7;
 }
 
 main .discount,
 main .description {
     font-size: 1.6rem;
+}
+
+main section article i {
+    display: block;
+    font-size: 1.6rem;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    color: var(--color-verde);
+    border: 1px solid var(--color-verde);
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
