@@ -1,11 +1,12 @@
 {
   "name": "dh-mercado-liebre",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Leonardo Casales <leonardo@smartnet.com.ar>",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_PORT=3000 nodemon watch src exec \"node src/app.js\"",
+    "start": "node src/index.js",
+    "dev": "NODE_PORT=3000 nodemon watch src exec \"node src/index.js\"",
     "restart": "nodemon --signal SIGHUP src/index.js"
   },
   "dependencies": {

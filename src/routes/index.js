@@ -1,12 +1,15 @@
 
 const authRoutes = require('./authRoutes');
+const productsRoutes = require('./productsRoutes');
 
 const setRoutes = (app) => {
 
     app.use('/auth', authRoutes);
 
+    app.use('/products', productsRoutes);
+
     app.get('/', (req, res) => {
-        res.render('index', {});
+        res.redirect('/products');
     });
 
     app.use('*', (req, res) => {
