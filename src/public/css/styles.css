@@ -106,6 +106,10 @@ main section article .product-info {
 
 @media (min-width: 361px) {
 
+    header .burger-menu {
+        display: none;
+    }
+
     main section  {
         display: flex;
         flex-wrap: wrap;
