@@ -1,4 +1,5 @@
 
+const { productList, lastVisitedProductList } = require('../model/productList');
 const authRoutes = require('./authRoutes');
 const productsRoutes = require('./productsRoutes');
 
@@ -9,7 +10,12 @@ const setRoutes = (app) => {
     app.use('/products', productsRoutes);
 
     app.get('/', (req, res) => {
-        res.redirect('/products');
+        const offers = productList.filter(product => product.isOffer);
+
+        res.render('index', {
+            offers,
+            lastVisitedProductList
+        });
     });
 
     app.use('*', (req, res) => {

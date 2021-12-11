@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head', {title: 'Mercado Liebre'}) -%>
+
+<body>
+    <%- include('./partials/header') -%>
+
+    <section class="banner">
+        <img src="../images/img-home-banner.jpg" alt="banner">
+    </section>
+
+    <main>
+        <h3>Productos</h3>
+        <section class="products last-visits">
+            <% for ( product of products ) { %>
+
+                <%- include('./partials/product', {
+                    description: product.description,
+                    picture: product.picture,
+                    price: product.price,
+                    discount: product.discount
+                }) -%>
+
+            <% } %>
+        </section>
+
+    </main>
+    <%- include('./partials/footer') -%>
+</body>
+
+</html>
