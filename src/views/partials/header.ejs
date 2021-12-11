@@ -1,16 +1,21 @@
+<header>
+    <div class="logo-search">
+        <img src="../images/logo-mercado-liebre.svg" alt="logo-mercado-liebre">
+        <form action="/products" method="get" class="search-controls">
+            <input class="search-input" type="text" name="search" placeholder="buscar ...">
+            <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    <h3 class="subtitle"><i class="fas fa-hand-holding-usd"></i> Compra en cuotas y sin tarjeta de crédito</h3>
 
-    <header>
-        <div class="logo-search">
-            <img src="../images/logo-mercado-liebre.svg" alt="logo-mercado-liebre">
-            <div class="search-controls">
-                <input class="search-input" type="text" placeholder="buscar ...">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-        <h3 class="subtitle"><i class="fas fa-hand-holding-usd"></i> Compra en cuotas y sin tarjeta de crédito</h3>
+    <div id="burger-menu" class="burger-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="navs">
 
         <nav class="site-sections-nav">
-            <ul>
+            <ul class="ul-nav">
                 <li><a href="/">Ofertas</a></li>
                 <li><a href="">Tiendas oficiales</a></li>
                 <li><a href="">Vender</a></li>
@@ -18,25 +23,26 @@
             </ul>
         </nav>
 
-        <nav class="user-account">
-            <ul>
+        <nav class="user-account-nav">
+            <ul class="ul-nav">
                 <li><a href="/auth/sign-up">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
                 <li><a href="/auth/sign-in">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href="">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
+    </div>
 
-            <div id="burger-menu" class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+</header>
 
-    </header>
+<script>
+    const $menu = document.getElementById("burger-menu")
 
-    <script>
-        const $menu = document.getElementById("burger-menu")
+    $menu.addEventListener("click", function () {
+        $nav = document.getElementsByTagName("nav");
+        $nav[0].classList.toggle("active");
+        $nav[1].classList.toggle("active");
 
-        $menu.addEventListener("click", function() {
-            alert("click en el menú hamburguesa")
-        })
 
-    </script>
+    })
+
+</script>

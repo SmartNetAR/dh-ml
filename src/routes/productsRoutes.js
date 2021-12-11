@@ -1,15 +1,19 @@
 
 const express = require('express');
-const { productList, lastVisitedProductList } = require('../model/productList');
+const { productList } = require('../model/productList');
 const router = express.Router();
 
 
 router.get('/', (req, res) => {
-    const offers = productList.filter(product => product.isOffer);
+    let products = productList;
+    if (req.query.search) {
+        products = products.filter(product => {
+            return product.description.toLowerCase().includes(req.query.search.toLowerCase());
+        });
+    }
 
-    res.render('index', {
-        offers,
-        lastVisitedProductList
+    res.render('products', {
+        products
     });
 });
 
