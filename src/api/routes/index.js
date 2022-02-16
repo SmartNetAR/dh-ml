@@ -14,7 +14,34 @@ router.post('/auth/login', (req, res) => {
     console.log('>>> process.env.NODE_ENV:');
     console.log(process.env.NODE_ENV);
     res.cookie("secureCookie", JSON.stringify(dataToSecure), {
-      secure: process.env.NODE_ENV !== "development",
+    //   secure: process.env.NODE_ENV !== "development",
+      secure: false,
+      httpOnly: true,
+      sameSite: "none",
+      expires: dayjs().add(30, "days").toDate(),
+    });
+
+    res.json({
+        "status": "success",
+        "message": "Login Successful",
+        "data": {
+            user
+        }
+    });
+});
+
+router.get("/cookie", (req, res) => {
+    const user = users.find(u => true);
+
+    const dataToSecure = {
+      dataToSecure: "This is the secret data in the cookie.",
+    };
+
+    console.log('>>> process.env.NODE_ENV:');
+    console.log(process.env.NODE_ENV);
+    res.cookie("secureCookie", JSON.stringify(dataToSecure), {
+    //   secure: process.env.NODE_ENV !== "development",
+      secure: false,
       httpOnly: true,
       sameSite: "none",
       expires: dayjs().add(30, "days").toDate(),
